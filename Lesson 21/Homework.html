@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Sum of arguments and Math objects </p>
+<p id="result"></p>
+
+<script>
+    function sumAll() {
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+
+    document.getElementById("result").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+
+    // Convert degrees to radians
+    function toRadians(deg) {
+        return deg * Math.PI / 180;
+    }
+
+    var angle = 45; // degrees
+    var value = Math.sin(toRadians(angle));
+    document.write("Sin 45° is : " + value + "<br>");
+    var value1 = Math.cos(toRadians(angle));
+    document.write("Cos 45° is : " + value1 + "<br>");
+    var value2 = Math.tan(toRadians(angle));
+    document.write("Tan 45° is : " + value2 + "<br>");
+</script>
+</body>
+</html>
+
