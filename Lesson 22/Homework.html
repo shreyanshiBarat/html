@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects and Arrays</h2>
+    <div id="output"></div>
+    <script>
+      // Object
+      var student = {
+        name: 'Riya',
+        age: 12,
+        grade: 7,
+        hobbies: 'Drawing',
+        fav_sport: 'Cricket'
+      };
+
+      // Array
+      var colors = ["white", "black", "red", "green", "blue"];// Output container
+      var output = document.getElementById("output");
+// Display student info
+      output.innerHTML += "Student name is: " + student.name + "<br>";
+      output.innerHTML += "Student favorite sport is: " + student.fav_sport + "<br>";
+
+      // Before popping
+      output.innerHTML += "Before popping the colors are: " + colors.join(" ^ ") + "<br>";// Favorite color
+      output.innerHTML += "My favorite color is: " + colors[3] + "<br>";
+ // Pop last color
+      colors.pop(); // After popping
+      output.innerHTML += "After popping the colors are: " + colors.join(" * ");
+    </script>
+  </body>
+</html>
