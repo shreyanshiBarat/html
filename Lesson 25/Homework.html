@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Class Inheritance</title>
+</head>
+<body>
+    <p id="details"></p>
+    <p id="greetings"></p>
+
+    <script>
+        // Base class
+        class Student {
+            constructor(name) {
+                this.studentName = name;
+            }
+
+            present() {
+                return "My name is " + this.studentName;
+            }
+
+            static hello() {
+                return "Hello Students!";
+            }
+        }
+
+        // Derived class
+        class Grade extends Student {
+            constructor(name, grade) {
+                super(name); // call parent constructor
+                this.studentGrade = grade;
+            }
+
+            show() {
+                return this.present() + ", Grade: " + this.studentGrade;
+            }
+        }
+
+        // Create an object
+        let myStudent = new Grade("Tina", "6");
+
+        // Display results
+        document.getElementById("details").innerHTML = myStudent.show();
+        document.getElementById("greetings").innerHTML = Student.hello();
+    </script>
+</body>
+</html>
