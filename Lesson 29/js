@@ -1,0 +1,23 @@
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailPattern.test(email)) {
+  alert("Please enter a valid email address (e.g., user@domain.com).");
+  event.preventDefault();
+}
+async function delayedReturn(str) {
+  await new Promise(resolve => setTimeout(resolve, 2000)); // wait 2 seconds
+  return str;
+}
+
+// Example usage:
+delayedReturn("Hello World").then(result => console.log(result));
+function safeParseJSON(str) {
+  try {
+    return JSON.parse(str);
+  } catch (error) {
+    return {}; // default empty object if parsing fails
+  }
+}
+
+// Example usage:
+console.log(safeParseJSON('{"name":"Alice"}')); // { name: "Alice" }
+console.log(safeParseJSON("invalid JSON"));     // {}

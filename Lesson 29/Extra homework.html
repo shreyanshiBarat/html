@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script>
-            function validationForm() {
-                var x = document.forms["myForm"]["fname"].value;
-                if (x == "") {
-                    alert("Name must be filled out");
-                    return false;
-            }
-            
-            }
-        </script>
-    </head>
-    <body>
+<form id="myForm">
+  <label>Username: <input type="text" id="username"></label><br>
+  <label>Email: <input type="text" id="email"></label><br>
+  <button type="submit">Submit</button>
+</form>
 
-        <form name="myForm" onsubmit="return validationForm()">
-            Name: <input type="text" name="fname">
-            <input type="submit" value="Submit">
-        </form>
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  const username = document.getElementById("username").value.trim();
+  const email = document.getElementById("email").value.trim();
 
-        <p id="message"></p>
-
-    </body>
-</html>
+  if (!username || !email) {
+    alert("Username and Email cannot be empty!");
+    event.preventDefault(); // stop form submission
+  }
+});
+</script>
