@@ -91,6 +91,9 @@ body, html {
 .ptext .border .trans {
     background-color:transparent;
 }
+section {
+    background-color: #ffe066;
+}
 
 @media(max-width:569px){
     .pimg1, .pimg2, .pimg3 {

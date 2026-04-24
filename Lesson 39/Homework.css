@@ -92,6 +92,7 @@ body, html {
     background-color:transparent;
 }
 
+
 @media(max-width:569px){
     .pimg1, .pimg2, .pimg3 {
         background-attachment:scroll;
